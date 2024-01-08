@@ -91,4 +91,5 @@ nano /var/www/your_domain/index.html
 Paste the contents of index.html (found in the VM-1 Files directory of this repo) and save the file. 
 
 Now, go to your browser, and paste the public IP of your Web Server (or domain name) to see if the file is being fetched. In our case, that is the result:
+
 ![image](https://github.com/samishafique786/CloudWordPressDeployment/assets/108603607/372f08fa-b9a3-48ea-a0e9-4d533b9901c5)
