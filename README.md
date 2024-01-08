@@ -57,13 +57,30 @@ sudo apt install php-fpm php-mysql
 
 ```bash
 # Create web root directory
-sudo mkdir /var/www/your_domain
+sudo mkdir /var/www/<your_domain>
 
 # Set ownership
-sudo chown -R $USER:$USER /var/www/<your-public-ip-or-domain-name-if-you-have>
+sudo chown -R $USER:$USER /var/www/<your_domain>
 
 # Create Nginx server block configuration
-sudo nano /etc/nginx/sites-available/<your-public-ip-or-domain-name-if-you-have>
+sudo nano /etc/nginx/sites-available/<your_domain>
 # paste the contents of the "your_domain" file (you can find it in the files directory of this repo.
 ```
 
+Now that you have written the NGINX configuration, it is time to activate these configurations. You do that by linking to the config file from Nginx’s sites-enabled directory:
+```bash
+sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
+```
+Then, unlink the default NGINX configuration
+```bash
+sudo unlink /etc/nginx/sites-enabled/default
+```
+
+Wanna check your new NGINX configuration for syntax errors?
+```bash
+sudo nginx -t
+```
+Time to reload NGINX for applying the new configurations
+```bash
+sudo systemctl reload nginx
+```
