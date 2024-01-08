@@ -64,7 +64,7 @@ sudo chown -R $USER:$USER /var/www/<your_domain>
 
 # Create Nginx server block configuration
 sudo nano /etc/nginx/sites-available/<your_domain>
-# paste the contents of the "your_domain" file (you can find it in the files directory of this repo.
+# paste the contents of the "your_domain" file (you can find it in the VM-1 Files directory of this repo.
 ```
 
 Now that you have written the NGINX configuration, it is time to activate these configurations. You do that by linking to the config file from Nginx’s sites-enabled directory:
