@@ -37,3 +37,5 @@ Adjust Nginx server block for WordPress performance.
 Generate a self-signed SSL certificate.
 Configure NGINX to use SSL.
 Adjust Nginx configuration for SSL.
+
+## For complete project setup, follow the instructions on [1-The-LEMP-Architecture.md](https://github.com/samishafique786/CloudWordPressDeployment/blob/main/1-The-LEMP-Architecture.md), [2-MySQL-Configuration.md](https://github.com/samishafique786/CloudWordPressDeployment/blob/main/2-MySQL-Configuration.md), and [3-WordPress-Configuration.md](https://github.com/samishafique786/CloudWordPressDeployment/blob/main/3-WordPress-Configuration.md) respectively. Some of the files are given in the **VM-1 Files** directory in this repository.  
