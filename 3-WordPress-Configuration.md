@@ -25,4 +25,4 @@ location ~* \.(css|gif|ico|jpeg|jpg|js|png)$ {
     log_not_found off;
 }
 ```
-The <your_domain> file now looks like [this]([url](https://github.com/samishafique786/CloudWordPressDeployment/blob/main/VM-1%20Files/128.214.253.37)https://github.com/samishafique786/CloudWordPressDeployment/blob/main/VM-1%20Files/128.214.253.37).
+The <your_domain> file now looks like [this](https://github.com/samishafique786/CloudWordPressDeployment/blob/main/VM-1%20Files/128.214.253.37).
