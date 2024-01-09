@@ -93,3 +93,5 @@ Paste the contents of index.html (found in the VM-1 Files directory of this repo
 Now, go to your browser, and paste the public IP of your Web Server (or domain name) to see if the file is being fetched. In our case, that is the result:
 
 ![image](https://github.com/samishafique786/CloudWordPressDeployment/assets/108603607/372f08fa-b9a3-48ea-a0e9-4d533b9901c5)
+
+Now, that we know our block server is running, it is time to install WordPress on VM-1 and configure it to use a remote database to optimize site performance with MySQL (on the VM-DB). 
