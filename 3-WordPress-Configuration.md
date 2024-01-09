@@ -1,10 +1,10 @@
 # WordPress Installation and Configuration on VM-1 (the web server)
- Since WordPress using PHP and its different extensions, let us install the necessary ones before installing WordPress.
+ Since WordPress uses PHP and its different extensions, let us install the necessary ones before installing WordPress.
 
 ```bash
 sudo apt install php-curl php-gd php-intl php-mbstring php-soap php-xml php-xmlrpc php-zip
 ```
-Now that the new extentions have been installed, let us restart PHP so that it make use of the new features
+Now that the new extensions have been installed, let us restart PHP so that it makes use of the new features
 ```bash
 sudo systemctl restart php7.4-fpm
 ```
@@ -65,23 +65,21 @@ sudo chown -R www-data:www-data /var/www/your_domain
 ```bash
 curl -s https://api.wordpress.org/secret-key/1.1/salt/
 ```
-you will recieve secure values. You need to paste them in the WordPress 
+you will receive secure values. You need to paste them into the WordPress config file
 
 3. Open the WordPress Config File and Paste the Keys
 ```bash
 sudo nano /var/www/your_domain/wp-config.php
 ```
-Find the section that contains the example values for those settings:
+Find the section that contains the example values for those settings and paste the appropriate keys:
 /var/www/your_domain/wp-config.php
+![image](https://github.com/samishafique786/CloudWordPressDeployment/assets/108603607/984d73aa-779d-47c9-b713-3f8bc0b2bf9e)
 
-. . .
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
-. . .
-4. vv
+4. In the same config file, at the top of the file, modify the database connection settings:
+ ![image](https://github.com/samishafique786/CloudWordPressDeployment/assets/108603607/56204419-926b-453e-8985-eec4e830f6cb)
+5. After the **define('DB_HOST', 'db_server_ip');** line, add the following line to make sure WordPress uses SSL secure remote connection to MySQL database:
+   ```bash
+   define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL);
+   ```
+save and close the file now.
+
