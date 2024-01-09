@@ -25,7 +25,7 @@ location ~* \.(css|gif|ico|jpeg|jpg|js|png)$ {
     log_not_found off;
 }
 ```
-The <your_domain> file now looks like [this](https://github.com/samishafique786/CloudWordPressDeployment/blob/main/VM-1%20Files/128.214.253.37).
+The <your_domain> file now looks like [this](https://github.com/samishafique786/CloudWordPressDeployment/blob/main/VM-1%20Files/your_domain).
 
 **Note: The server block now listens on port 443 with SSL, includes the SSL snippets, and redirects HTTP traffic to HTTPS (80 to 443 port)**
 
