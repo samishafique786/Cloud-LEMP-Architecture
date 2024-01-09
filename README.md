@@ -7,6 +7,9 @@ This repository contains Terraform scripts and instructions for deploying a secu
 - **Infrastructure:** Two Ubuntu VMs - one as a web server (VM 1) with Nginx and PHP, and the other (VM-DB) as a MySQL database server.
 - **Features:** SSL certificates for encrypted connections, enhanced security with private subnet for the database.
 
+![LEMP-GIT](https://github.com/samishafique786/CloudWordPressDeployment/assets/108603607/55ff980f-03be-4cf8-8303-8cc5b7e61aed)
+
+
 ## Deployment
 
 1. Configure your cloud provider's account in `providers.tf`.
