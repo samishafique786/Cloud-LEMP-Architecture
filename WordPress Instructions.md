@@ -1,4 +1,4 @@
-# WordPress Installation and MySQL Configuration
+# MySQL Configuration
 ## Step 1: Configuring MySQL on VM-2
 
 It is assumed that you are still SSHed into your database server because first we need to configure MySQL to Listen for Remote Connections. We can do that by editing the mysqld.cnf file. Open it up using:
@@ -57,3 +57,31 @@ Now, flush the privileges and exit.
 FLUSH PRIVILEGES;
 exit
 ```
+## Step 3: Testing the Remote and Local Connections
+
+### Testing Local DB User
+
+To test the local connection,
+
+```bash
+mysql -u local_db_user -p
+```
+and now write the password you set. If the password is correct, you will be in the MySQL prompt of the local db user. You can exit the prompt by typing **exit**.
+
+### Testing Remote DB User from Web Server
+
+Drop the SSH connection from the VM-DB (the database server) and you will be SSHed back into the VM-1 (the webserver) from where you will test the remote database user and its connection to the database server. (remember, you have already created the remote user earlier)
+
+1. Fisrt, Install MySQL Client Utilities
+   ```bash
+   sudo apt update
+   sudo apt install mysql-client
+   ```
+2. Log into the Remote Database User
+   ```bash
+   mysql -u remote_user -h db_server_ip -p
+   ```
+You will now be required to enter the password you set earlier. If you've been logged into the remote database user, you will be taken to the MySQL prompt. Now, write **status** to see if the connection is using SSL.
+![image](https://github.com/samishafique786/CloudWordPressDeployment/assets/108603607/66a49e9e-158e-4ff2-bd10-82ec90344b01)
+As you can see, the connection is indeed using SSL. now, exit the prompt using **exit**.
+
