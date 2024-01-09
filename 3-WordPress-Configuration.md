@@ -143,3 +143,10 @@ Open the configuration file
 sudo nano /etc/nginx/sites-available/your_domain
 ```
 If you've copied and pasted the contents of the file from the [file provided](https://github.com/samishafique786/CloudWordPressDeployment/blob/main/VM-1%20Files/your_domain), NGINX is already configured to be using SSL. if not, paste the contents of the file provided to your configuration file. 
+
+![image](https://github.com/samishafique786/CloudWordPressDeployment/assets/108603607/1b88bae0-aef6-4f0b-b87a-2fe435650662)
+Image: A Sample Web Site Using SSL Certificate
+
+
+
+### Boom!!! We have now configured a WordPress website that runs on the Web Server but the Database is stored in another virtual machine that is in the private subnet. The connection from the Web Server to the database is secure, and the NGINX web server
